@@ -17,6 +17,7 @@ A powerful Node.js REST API wrapper for Midjourney Discord bot, enabling program
 - 🔄 **Real-time Processing**: WebSocket integration for live updates
 - 📊 **Comprehensive Logging**: Detailed request/response logging
 - 🐳 **Production Ready**: PM2 ecosystem configuration included
+- 🔗 **n8n Ready**: Designed specifically for seamless n8n workflow integration
 
 ## 🎯 Why This Project?
 
@@ -28,6 +29,38 @@ This API was born from the need to **automate AI image generation** for content 
 - **Scalable AI image workflows** for publishing platforms
 
 The project started as an internal tool to streamline the image creation process for blog articles, but evolved into a comprehensive API that can handle complex multi-image prompts, automatic upscaling, and production-scale deployments.
+
+## 🔗 Perfect for n8n Integration
+
+This API was **specifically designed for seamless integration with n8n workflows**, making it the ideal bridge between n8n and Midjourney's powerful AI image generation capabilities.
+
+### 🎯 n8n Use Cases
+
+- **🤖 Automated Content Creation**: Generate images automatically when new content is created
+- **📱 Social Media Automation**: Create custom visuals for scheduled social posts
+- **📧 Email Campaign Images**: Generate personalized images for email marketing
+- **🛒 E-commerce Product Visuals**: Create product mockups and promotional images
+- **📊 Report Visualization**: Generate custom charts and infographic elements
+- **🎨 Creative Workflows**: Trigger image generation from form submissions or webhooks
+
+### ⚡ n8n Integration Benefits
+
+- **REST API Compatible**: Direct HTTP requests from n8n nodes
+- **JSON Response Format**: Clean, structured responses for easy n8n processing
+- **Error Handling**: Robust error responses for n8n workflow management
+- **Async Processing**: Non-blocking requests perfect for n8n automation
+- **Webhook Ready**: Easy integration with n8n webhook triggers
+- **Parameter Mapping**: All Midjourney parameters exposed as API endpoints
+
+### 🚀 Quick n8n Setup
+
+1. Add an **HTTP Request node** in your n8n workflow
+2. Set method to **POST** and URL to `http://your-server:3147/generate`
+3. Configure headers: `Content-Type: application/json`
+4. Add your image generation parameters in the request body
+5. Process the JSON response in subsequent nodes
+
+**Perfect for creators who want to automate their AI image generation workflows without the complexity of Discord bot management!**
 
 ## 🚀 Quick Start
 
@@ -125,6 +158,18 @@ curl -X POST http://localhost:3147/generate \
     ]
   }'
 ```
+
+**n8n Workflow Integration:**
+```json
+{
+  "prompt": "{{ $json.articleTitle }} - professional blog thumbnail, modern design",
+  "speed": "fast",
+  "aspectRatio": "16:9",
+  "stylize": 150,
+  "version": "6"
+}
+```
+*Perfect for n8n workflows - use expressions to dynamically generate prompts from previous nodes!*
 
 #### Response Format
 

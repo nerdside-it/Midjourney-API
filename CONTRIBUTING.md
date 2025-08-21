@@ -31,7 +31,7 @@ This project and everyone participating in it is governed by our Code of Conduct
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm 8+
 - Discord account with Midjourney access
 - Git
@@ -75,7 +75,7 @@ docker-compose up --build
 
 Use descriptive branch names:
 - `feature/add-batch-processing`
-- `fix/upscale-error-handling`  
+- `fix/upscale-error-handling`
 - `docs/update-api-examples`
 - `refactor/cleanup-image-processing`
 

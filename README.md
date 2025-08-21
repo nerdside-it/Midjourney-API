@@ -24,27 +24,16 @@ This API was born from the need to **automate AI image generation** for content 
 
 - **Automated article thumbnails** generation from article content
 - **Bulk image processing** for social media content
-- **Integration with content management systems** 
+- **Integration with content management systems**
 - **Scalable AI image workflows** for publishing platforms
 
 The project started as an internal tool to streamline the image creation process for blog articles, but evolved into a comprehensive API that can handle complex multi-image prompts, automatic upscaling, and production-scale deployments.
-
-### 🌟 Born at Nerdside.it
-
-[**Nerdside.it**](https://nerdside.it) covers the latest in gaming technology, artificial intelligence, and digital innovation. When manually creating dozens of article thumbnails became time-consuming, this API was developed to:
-
-- Generate contextual images from article titles and content
-- Create consistent visual branding across publications
-- Automate the entire image generation pipeline
-- Enable rapid content creation workflows
-
-What started as a simple automation script grew into a robust, production-ready API that now powers image generation for multiple content platforms.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - Discord account with Midjourney bot access
 - Discord bot token (SALAI_TOKEN)
 
@@ -66,7 +55,7 @@ cp .env.example .env
 2. Edit `.env` with your Discord credentials:
 ```env
 SERVER_ID="your_discord_server_id"
-CHANNEL_ID="your_discord_channel_id" 
+CHANNEL_ID="your_discord_channel_id"
 SALAI_TOKEN="your_discord_bot_token"
 PORT=3147
 ```
@@ -125,7 +114,7 @@ curl -X POST http://localhost:3147/generate \
   -d '{
     "prompt": "futuristic cyberpunk city",
     "speed": "fast",
-    "aspectRatio": "16:9", 
+    "aspectRatio": "16:9",
     "stylize": 200,
     "chaos": 25,
     "upscaleIndex": "2",
@@ -175,9 +164,9 @@ The API supports multiple ways to send reference images:
 **Individual Parameters:**
 ```json
 {
-  "prompt": "your prompt here", 
+  "prompt": "your prompt here",
   "image1": "url1",
-  "image2": "url2", 
+  "image2": "url2",
   "image3": "url3"
 }
 ```
@@ -194,7 +183,7 @@ The API supports multiple ways to send reference images:
   "weird": 100,
   "tile": true,
   "version": "6",
-  "upscaleIndex": "3", 
+  "upscaleIndex": "3",
   "upscaleMethod": "subtle",
   "images": [
     "https://example.com/mountain.jpg",
@@ -227,7 +216,7 @@ pm2 logs midjourney-api
 # Build image
 docker build -t midjourney-api .
 
-# Run container  
+# Run container
 docker run -d \
   --name midjourney-api \
   -p 3147:3147 \
@@ -240,7 +229,7 @@ docker run -d \
 The API provides comprehensive logging:
 
 - 🔍 **Request/Response Logging**: All API calls logged
-- 📸 **Image Processing**: Detailed image handling logs  
+- 📸 **Image Processing**: Detailed image handling logs
 - ⚡ **Performance Metrics**: Processing time tracking
 - 🚨 **Error Handling**: Detailed error information
 - 🎯 **Debug Mode**: Extensive debugging information
@@ -259,7 +248,7 @@ npm start            # Production server
 ```
 midjourney-api/
 ├── index.js              # Main API server
-├── package.json           # Dependencies & scripts  
+├── package.json           # Dependencies & scripts
 ├── .env.example          # Environment template
 ├── .gitignore            # Git ignore rules
 ├── ecosystem.config.js   # PM2 configuration
@@ -283,7 +272,7 @@ Import the Postman collection from the `postman/` directory for comprehensive AP
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)  
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
@@ -308,7 +297,7 @@ If you encounter any issues or have questions:
 This project was created for and is actively used by [**Nerdside.it**](https://nerdside.it), an Italian tech blog covering:
 
 - 🎮 **Gaming Technology**: Latest gaming hardware, reviews, and industry news
-- 🤖 **Artificial Intelligence**: AI tools, tutorials, and emerging technologies  
+- 🤖 **Artificial Intelligence**: AI tools, tutorials, and emerging technologies
 - 💻 **Digital Innovation**: Software development, automation, and tech trends
 - 🚀 **Content Creation**: Tools and workflows for modern digital publishing
 
@@ -324,8 +313,8 @@ The API processes hundreds of images monthly, demonstrating its reliability and 
 
 ### Visit Nerdside.it
 
-🔗 **Website**: [https://nerdside.it](https://nerdside.it)  
-📱 **Social**: Follow [@nerdsideit](https://twitter.com/nerdsideit) for the latest tech updates  
+🔗 **Website**: [https://nerdside.it](https://nerdside.it)
+📱 **Social**: Follow [@nerdsideit](https://twitter.com/nerdsideit) for the latest tech updates
 📧 **Contact**: Reach out for collaborations and tech discussions
 
 ## 🙏 Acknowledgments

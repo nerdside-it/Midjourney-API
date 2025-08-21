@@ -5,6 +5,7 @@ A powerful Node.js REST API wrapper for Midjourney Discord bot, enabling program
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![API Version](https://img.shields.io/badge/API-v1.0.0-orange.svg)]()
+[![Made for](https://img.shields.io/badge/Made%20for-Nerdside.it-red.svg)](https://nerdside.it)
 
 ## ✨ Features
 
@@ -16,6 +17,28 @@ A powerful Node.js REST API wrapper for Midjourney Discord bot, enabling program
 - 🔄 **Real-time Processing**: WebSocket integration for live updates
 - 📊 **Comprehensive Logging**: Detailed request/response logging
 - 🐳 **Production Ready**: PM2 ecosystem configuration included
+
+## 🎯 Why This Project?
+
+This API was born from the need to **automate AI image generation** for content creation workflows. Originally developed for [**Nerdside.it**](https://nerdside.it) - a tech blog focused on gaming, AI, and emerging technologies - this tool enables:
+
+- **Automated article thumbnails** generation from article content
+- **Bulk image processing** for social media content
+- **Integration with content management systems** 
+- **Scalable AI image workflows** for publishing platforms
+
+The project started as an internal tool to streamline the image creation process for blog articles, but evolved into a comprehensive API that can handle complex multi-image prompts, automatic upscaling, and production-scale deployments.
+
+### 🌟 Born at Nerdside.it
+
+[**Nerdside.it**](https://nerdside.it) covers the latest in gaming technology, artificial intelligence, and digital innovation. When manually creating dozens of article thumbnails became time-consuming, this API was developed to:
+
+- Generate contextual images from article titles and content
+- Create consistent visual branding across publications
+- Automate the entire image generation pipeline
+- Enable rapid content creation workflows
+
+What started as a simple automation script grew into a robust, production-ready API that now powers image generation for multiple content platforms.
 
 ## 🚀 Quick Start
 
@@ -280,54 +303,38 @@ If you encounter any issues or have questions:
 2. Create a new issue with detailed information
 3. Provide logs and error messages
 
+## 🌐 About Nerdside.it
+
+This project was created for and is actively used by [**Nerdside.it**](https://nerdside.it), an Italian tech blog covering:
+
+- 🎮 **Gaming Technology**: Latest gaming hardware, reviews, and industry news
+- 🤖 **Artificial Intelligence**: AI tools, tutorials, and emerging technologies  
+- 💻 **Digital Innovation**: Software development, automation, and tech trends
+- 🚀 **Content Creation**: Tools and workflows for modern digital publishing
+
+### Real-World Usage
+
+At Nerdside.it, this API powers:
+- **Article thumbnail generation** from headlines and content
+- **Social media content** automation for Twitter, Instagram, and Facebook
+- **Video thumbnail creation** for YouTube and TikTok content
+- **Newsletter graphics** and promotional materials
+
+The API processes hundreds of images monthly, demonstrating its reliability and scalability in production environments.
+
+### Visit Nerdside.it
+
+🔗 **Website**: [https://nerdside.it](https://nerdside.it)  
+📱 **Social**: Follow [@nerdsideit](https://twitter.com/nerdsideit) for the latest tech updates  
+📧 **Contact**: Reach out for collaborations and tech discussions
+
 ## 🙏 Acknowledgments
 
-- [Midjourney](https://midjourney.com) for the amazing AI image generation
+- [**Nerdside.it**](https://nerdside.it) - The tech blog that inspired and uses this project
+- [Midjourney](https://midjourney.com) for the amazing AI image generation capabilities
 - [Node.js Midjourney Library](https://github.com/erictik/midjourney-api) for Discord integration
-- Contributors and testers
+- The open source community for continuous feedback and contributions
 
 ---
 
 **⭐ If this project helps you, please give it a star on GitHub!**
-{
-  "prompt": "portrait in this style",
-  "referenceImages": ["https://example.com/style-reference.jpg"],
-  "stylization": 150
-}
-```
-
-### Risposta
-
-```json
-{
-  "success": true,
-  "messageId": "1234567890",
-  "prompt": "a futuristic city with neon lights --aspect 16:9 --quality 2 --stylize 200 --weird 50 --chaos 25",
-  "originalPrompt": "a futuristic city with neon lights",
-  "parameters": {
-    "speed": "fast",
-    "resolution": "HD",
-    "version": "7",
-    "mode": "Standard",
-    "aspectRatio": "16:9",
-    "stylization": 200,
-    "weirdness": 50,
-    "variety": 25,
-    "referenceImages": ["https://example.com/reference1.jpg"]
-  },
-  "status": "generating"
-}
-```
-
-### Parametri Midjourney mappati
-
-- `aspectRatio` → `--aspect`
-- `version` → `--version`
-- `stylization` → `--stylize`
-- `weirdness` → `--weird`
-- `variety` → `--chaos`
-- `mode: "Raw"` → `--style raw`
-- `resolution: "HD"` → `--quality 2`
-- `speed: "relax"` → `--relax`
-- `speed: "turbo"` → `--turbo`
-- `referenceImages` → Aggiunge gli URL all'inizio del prompt

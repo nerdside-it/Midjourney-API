@@ -1,0 +1,50 @@
+{
+  "name": "midjourney-api",
+  "version": "1.0.0",
+  "description": "A powerful Node.js REST API wrapper for Midjourney Discord bot, enabling programmatic access to Midjourney's AI image generation capabilities.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "midjourney",
+    "ai",
+    "image-generation",
+    "discord",
+    "api",
+    "rest-api",
+    "nodejs",
+    "express",
+    "artificial-intelligence",
+    "automation"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@domain.com",
+    "url": "https://github.com/your-username"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/midjourney-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/midjourney-api/issues"
+  },
+  "homepage": "https://github.com/your-username/midjourney-api#readme",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "canvas": "^3.1.2",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "midjourney": "^4.3.18",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.7",
+    "sharp": "^0.34.3",
+    "slugify": "^1.6.6"
+  }
+}

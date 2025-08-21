@@ -1,0 +1,206 @@
+{
+  "info": {
+    "name": "Midjourney API",
+    "description": "API per generare immagini con Midjourney tramite Discord bot",
+    "version": "1.0.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Generate Image - Basic",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"a beautiful sunset over mountains, photorealistic\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione base di un'immagine con solo il prompt"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - Full Parameters",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"a futuristic city with neon lights and flying cars\",\n  \"speed\": \"fast\",\n  \"resolution\": \"HD\",\n  \"version\": \"7\",\n  \"mode\": \"Standard\",\n  \"aspectRatio\": \"16:9\",\n  \"stylization\": 200,\n  \"weirdness\": 50,\n  \"variety\": 25,\n  \"referenceImages\": [\n    \"https://example.com/reference1.jpg\",\n    \"https://example.com/reference2.jpg\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione con tutti i parametri disponibili"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - Portrait Mode",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"portrait of a medieval knight in armor\",\n  \"speed\": \"fast\",\n  \"resolution\": \"HD\",\n  \"version\": \"7\",\n  \"mode\": \"Standard\",\n  \"aspectRatio\": \"3:4\",\n  \"stylization\": 150\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione di un ritratto in formato verticale"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - Raw Mode + Turbo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"abstract art with geometric shapes and vibrant colors\",\n  \"speed\": \"turbo\",\n  \"resolution\": \"SD\",\n  \"version\": \"7\",\n  \"mode\": \"Raw\",\n  \"aspectRatio\": \"1:1\",\n  \"stylization\": 50,\n  \"weirdness\": 100\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione in modalità Raw con velocità Turbo"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - Landscape",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"epic fantasy landscape with dragons and castles\",\n  \"speed\": \"fast\",\n  \"resolution\": \"HD\",\n  \"version\": \"7\",\n  \"mode\": \"Standard\",\n  \"aspectRatio\": \"16:9\",\n  \"stylization\": 300,\n  \"variety\": 15\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione di un paesaggio in formato widescreen"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - With Reference",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"portrait in this artistic style\",\n  \"speed\": \"fast\",\n  \"resolution\": \"HD\",\n  \"version\": \"7\",\n  \"mode\": \"Standard\",\n  \"aspectRatio\": \"3:4\",\n  \"stylization\": 150,\n  \"referenceImages\": [\n    \"https://cdn.pixabay.com/photo/2023/01/01/00/00/00-0000000-960-720.jpg\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione con immagine di riferimento per lo stile"
+      },
+      "response": []
+    },
+    {
+      "name": "Generate Image - Relax Mode",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"peaceful zen garden with cherry blossoms\",\n  \"speed\": \"relax\",\n  \"resolution\": \"SD\",\n  \"version\": \"7\",\n  \"mode\": \"Standard\",\n  \"aspectRatio\": \"3:2\",\n  \"stylization\": 100\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/generate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "generate"
+          ]
+        },
+        "description": "Generazione in modalità Relax (più economica ma più lenta)"
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3147",
+      "type": "string"
+    }
+  ]
+}

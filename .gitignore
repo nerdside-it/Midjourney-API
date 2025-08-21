@@ -16,6 +16,9 @@ pids
 *.seed
 *.pid.lock
 
+# Generated data directory
+.data/
+
 # Logs
 logs/
 *.log

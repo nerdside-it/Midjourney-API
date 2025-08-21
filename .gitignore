@@ -94,9 +94,8 @@ final-test.js
 generate-demo.js
 server-simple.js
 
-# Deployment files (sensitive)
+# Deployment files (customize for your environment)
 deploy.sh
-ecosystem.config.json
 
 # Temporary files
 temp/

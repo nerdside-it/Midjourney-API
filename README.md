@@ -191,7 +191,7 @@ The project includes PM2 ecosystem configuration:
 npm install -g pm2
 
 # Start with PM2
-pm2 start ecosystem.config.json
+pm2 start ecosystem.config.js
 
 # Monitor
 pm2 status
@@ -229,7 +229,6 @@ The API provides comprehensive logging:
 ```bash
 npm run dev          # Development with nodemon
 npm start            # Production server
-npm run vm:deploy    # Deploy to production server
 ```
 
 ### Project Structure
@@ -240,7 +239,13 @@ midjourney-api/
 ├── package.json           # Dependencies & scripts  
 ├── .env.example          # Environment template
 ├── .gitignore            # Git ignore rules
-├── ecosystem.config.json # PM2 configuration
+├── ecosystem.config.js   # PM2 configuration
+├── Dockerfile            # Docker configuration
+├── docker-compose.yml    # Docker Compose setup
+├── LICENSE               # MIT License
+├── CHANGELOG.md          # Version history
+├── CONTRIBUTING.md       # Contribution guidelines
+├── SECURITY.md           # Security policy
 ├── postman/              # Postman collection
 │   ├── Midjourney_API.postman_collection.json
 │   └── Midjourney_API.postman_environment.json
